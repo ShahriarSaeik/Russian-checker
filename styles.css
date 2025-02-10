@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.game-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#status {
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #444;
+}
+
+#board {
+    width: 400px;
+    height: 400px;
+    margin: 0 auto 20px;
+    border: 2px solid #333;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+}
+
+.cell {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.cell.white {
+    background-color: #fff;
+}
+
+.cell.black {
+    background-color: #769656;
+}
+
+.piece {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #333;
+}
+
+.piece.white {
+    background-color: #fff;
+}
+
+.piece.black {
+    background-color: #000;
+}
+
+.piece.king::after {
+    content: "♔";
+    font-size: 24px;
+    color: #FFD700;
+    position: relative;
+    top: -8px;
+}
+
+.cell.highlighted {
+    background-color: #baca44;
+}
+
+.cell.selected {
+    background-color: #f6f669;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1.1em;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
